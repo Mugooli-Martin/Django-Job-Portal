@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+    <html>
+
+    <h1>register here</h1>
+    <form method="POST" autocomplete="off">
+        <!--for every post request in django we pass a csrf_token-->
+        {% csrf_token %}
+        {{loginform.as_p}}
+        <!--the .as_p just adds in some styling in that the form is not so ugly-->
+        <input type="submit" value="login"/>
+
+    </form>
+
+    </html>
+ss

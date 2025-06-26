@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <h1>Register as Job Seeker</h1>
+    {% if seekerform.errors %}
+        <div style="color: red">
+            {% for field, errors in seekerform.errors.items %}
+                {% for error in errors %}
+                    <p>{{ field|title }}: {{ error }}</p>
+                {% endfor %}
+            {% endfor %}
+        </div>
+    {% endif %}
+
+    <form method="POST">
+        {% csrf_token %}
+        {{ seekerform.username.label_tag }}
+        {{ seekerform.username }}
+        {{ seekerform.email.label_tag }}
+        {{ seekerform.email }}
+        {{ seekerform.password1.label_tag }}
+        {{ seekerform.password1 }}
+        {{ seekerform.password2.label_tag }}
+        {{ seekerform.password2 }}
+        <input type="submit" value="Register"/>
+    </form>
+</body>
+</html>
