@@ -1,1 +1,1 @@
-A simple web-based job portal built with Django. It allows employers to post job vacancies and job seekers to register, browse, and apply for jobs. The project is developed using Python and Django for the backend, with HTML and CSS for the frontend, and uses SQLite as the default database.
+A simple web-based job portal built with Django. It allows employers to post job vacancies and job seekers to register, browse, and apply for jobs. 
