@@ -1,7 +1,14 @@
+{% load static %}
 <!DOCTYPE html>
 <html>
+    <head> 
+        <link rel="stylesheet" href="{% static "forms.css" %}"/>
+    </head>  
 <body>
     <h1>Register as Job Seeker</h1>
+
+
+    <!--Display errors while registering eg unmatching passwords-->
     {% if seekerform.errors %}
         <div style="color: red">
             {% for field, errors in seekerform.errors.items %}
