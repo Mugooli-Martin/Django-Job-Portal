@@ -7,45 +7,30 @@ from django.contrib.auth import authenticate, login, logout, get_user_model
 User = get_user_model()
 
 
-# Create your views here.
 def jobseeker_register(request):
-    form = JobseekerRegistrationForm()
-    if request.method =='POST':
+    # POST to handle form submissiom
+    if request.method == 'POST':
         form = JobseekerRegistrationForm(request.POST)
         if form.is_valid():
             form.save()
             return redirect('login')
-         # Add this to preserve failed submissions
+        # If form invalid, this show errors with submitted data
         return render(request, 'accounts/jobseeker_register.html', {'seekerform': form})
-    else:
-        form = JobseekerRegistrationForm()
+    
+    # for GET bring blank form
+    form = JobseekerRegistrationForm()
     return render(request, 'accounts/jobseeker_register.html', {'seekerform': form})
-
-        
-    context = {
-        'seekerform': form
-    }  
-    return render(request,'accounts/jobseeker_register.html', context=context) 
-        
     
 
 def employer_register(request):
-    form = EmployerRegistrationForm()
-    if request.method =="POST":
+    if request.method == 'POST':
         form = EmployerRegistrationForm(request.POST)
         if form.is_valid():
             form.save()
             return redirect('login')
-         # Add this to preserve failed submissions
         return render(request, 'accounts/employer_register.html', {'employerform': form})
-    else:
-        form = EmployerRegistrationForm()
+    form = EmployerRegistrationForm()  
     return render(request, 'accounts/employer_register.html', {'employerform': form})
-        
-    context = {
-        'employerform': form
-    }    
-    return render(request,'accounts/employer_register.html',context=context,)
 
 def login_view(request):
     form = LoginForm()
