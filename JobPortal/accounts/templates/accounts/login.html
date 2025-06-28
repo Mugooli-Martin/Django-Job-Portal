@@ -1,7 +1,11 @@
+{% load static %}
 <!DOCTYPE html>
     <html>
+        <head>
+            <link rel="stylesheet" href="{% static 'accounts/login.css'%}">
+        </head>
 
-    <h1>register here</h1>
+    <h1>Login here</h1>
     <form method="POST" autocomplete="off">
         <!--for every post request in django we pass a csrf_token-->
         {% csrf_token %}
@@ -12,4 +16,3 @@
     </form>
 
     </html>
-ss

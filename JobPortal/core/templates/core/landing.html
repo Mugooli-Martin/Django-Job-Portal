@@ -1,0 +1,73 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Job Portal Uganda</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="{% static 'core/landing.css' %}" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav>
+    <div class="logo">UgHire</div>
+    <div class="menu">
+      <a href="{% url 'jobseeker_register' %}">Register Jobseeker</a>
+      <a href="{% url 'employer_register' %}">Register Employer</a>
+      <a href="{% url 'login' %}">Login</a>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <h1>Find Your Dream Job in Uganda</h1>
+    <p>Connecting employers and job seekers with the right opportunities across the Pearl of Africa.</p>
+    <div class="btn-group">
+      <a href="{% url 'jobseeker_register' %}" class="btn">Register as Jobseeker</a>
+      <a href="{% url 'employer_register' %}" class="btn">Register as Employer</a>
+      <a href="{% url 'login' %}" class="btn login">Login</a>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section class="about" id="about">
+    <h2>About UgHire</h2>
+    <p>UgHire is a Ugandan job portal dedicated to connecting skilled individuals with meaningful employment across all regions. We aim to empower both job seekers and employers with accessible, reliable hiring solutions.</p>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-columns">
+      <div>
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="{% url 'login' %}">Login</a></li>
+          <li><a href="{% url 'jobseeker_register' %}">Register as Jobseeker</a></li>
+          <li><a href="{% url 'employer_register' %}">Register as Employer</a></li>
+          <li><a href="#about">About Us</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Legal</h4>
+        <ul>
+          <li><a href="#">Terms & Conditions</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+        </ul>
+      </div>
+      <div class="social-icons">
+        <h4>Follow Us</h4>
+        <a href="https://facebook.com/yourpage" target="_blank"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://twitter.com/yourhandle" target="_blank"><i class="fab fa-twitter"></i></a>
+        <a href="https://linkedin.com/in/yourprofile" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+        <a href="https://instagram.com/yourpage" target="_blank"><i class="fab fa-instagram"></i></a>
+      </div>
+    </div>
+    <p class="copyright">
+      &copy; 2025 UgHire. All rights reserved. | Designed with ♥ in Uganda
+    </p>
+  </footer>
+
+</body>
+</html>

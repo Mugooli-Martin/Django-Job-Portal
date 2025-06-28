@@ -1,0 +1,90 @@
+/* Reset some basic stuff */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+}
+
+/* NAVIGATION */
+header {
+    background-color: #003366;
+    color: white;
+    padding: 15px 20px;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo a {
+    color: white;
+    font-weight: bold;
+    font-size: 1.4rem;
+    text-decoration: none;
+}
+
+.nav-links a {
+    margin-left: 15px;
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+}
+
+.nav-links a:hover {
+    text-decoration: underline;
+}
+
+/* MAIN CONTENT */
+.content {
+    padding: 20px;
+    min-height: 70vh; /* Push footer down */
+}
+
+/* FOOTER */
+footer {
+    background-color: #003366;
+    color: white;
+    font-size: 14px;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    flex-wrap: wrap;
+}
+
+.footer-links, .footer-contact {
+    min-width: 150px;
+}
+
+.footer-links h4, .footer-contact h4 {
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.footer-links a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    margin-bottom: 6px;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
+
+.footer-contact p {
+    margin: 4px 0;
+}
+
+/* Bottom copyright bar */
+.footer-bottom {
+    background-color: #002244;
+    text-align: center;
+    padding: 12px 0;
+    color: #ccc;
+    font-size: 13px;
+}
